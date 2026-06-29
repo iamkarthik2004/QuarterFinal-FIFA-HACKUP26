@@ -815,18 +815,106 @@ section > h4 i {
     background: var(--card-bg);
     border-radius: 20px;
     border: 1px solid var(--card-border);
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .footer-logo-section p {
     font-size: 0.85rem;
     color: var(--text-muted);
-    margin: 15px 0;
+    margin: 15px 0 0 0;
     line-height: 1.5;
-    max-width: 300px;
+    max-width: 320px;
+}
+
+.footer-devs-section {
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+}
+
+.devs-title {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.devs-title i {
+    color: var(--primary-red);
+}
+
+.devs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.dev-card {
+    background: #1a1a1f;
+    border: 1px solid rgba(117, 170, 219, 0.2);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.dev-card:hover {
+    border-color: var(--primary-red);
+    box-shadow: 0 4px 15px rgba(51, 153, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.dev-info h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.dev-role {
+    font-size: 0.75rem;
+    color: #75aadb;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dev-links {
+    display: flex;
+    gap: 8px;
+}
+
+.dev-links a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #252530;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.dev-links a:hover {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .socials {
