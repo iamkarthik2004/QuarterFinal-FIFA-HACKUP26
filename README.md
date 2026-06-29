@@ -35,7 +35,7 @@ Build a National Team Fan Zone & Live-Cart Merchandise Store featuring:
 * Exactly three official jerseys per team with interactive size selection and favorite heart animations
 * Live fan comments simulator with live chat posting
 * Team-customized shopping cart with live badge counter and dynamic total calculations
-* Match Score Predictor interactive feature
+* Match Winner Predictor interactive feature
 
 ---
 
