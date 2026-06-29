@@ -9,8 +9,8 @@ The application allows football fans to explore their favorite national teams (A
 ## 👥 Project About & Developers
 
 ### **Developed By:**
-* 👨‍💻 **Karthik Krishnan** — [GitHub](https://github.com/iamkarthik2004) | [LinkedIn](https://www.linkedin.com/in/karthikkk708/)
-* 👨‍💻 **Deon George** — [GitHub](https://github.com/deon-george) | [LinkedIn](https://www.linkedin.com/in/deon-george-vadakkel/)
+* 👨‍💻 **Karthik Krishnan** — [LinkedIn](https://www.linkedin.com/in/karthikkk708/)
+* 👨‍💻 **Deon George** — [LinkedIn](https://www.linkedin.com/in/deon-george-vadakkel/)
 
 ### **About The Project:**
 National Fan Zone is an interactive digital hub designed for football enthusiasts. Built during FIFA HACKUP '26, it brings together team customization, live hero video playback, real-time fan reactions, match score prediction, and an interactive jersey checkout store tailored dynamically to each nation's color identity.
@@ -67,8 +67,8 @@ Three official 24/25 kits per nation with size selectors (`S`, `M`, `L`, `XL`), 
 * Real-time user login and sign-up modal backed by a Flask API and SQLite database
 * Logged-in users can post their own comments directly into the live fan discussion board
 
-## 🏆 Match Score Predictor
-An interactive score prediction tool allowing fans to input scores, simulate AI prediction generation, and view updated match expectations.
+## 🏆 Match Winner Predictor
+An interactive winner prediction tool allowing fans to input the winning team, simulate AI prediction generation, and view updated match winner.
 
 ---
 
@@ -114,19 +114,18 @@ QuarterFinal-FIFA-HACKUP26/
 ```bash
 git clone https://github.com/iamkarthik2004/QuarterFinal-FIFA-HACKUP26.git
 cd QuarterFinal-FIFA-HACKUP26
+cd backend
 ```
 
-### 2. Set up Python backend (Optional for API authentication)
+### How to run the App
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install flask
+pip install -r requirements.txt
 python3 app.py
 ```
-The server will run on `http://127.0.0.1:5000`.
+The App will be running on `http://127.0.0.1:5000`.
 
-### 3. Open Frontend
-Simply open any of the HTML portals (`frontend/indexI.html`, `frontend/indexA.html`, etc.) directly in your browser or serve via live server.
 
 ---
 
