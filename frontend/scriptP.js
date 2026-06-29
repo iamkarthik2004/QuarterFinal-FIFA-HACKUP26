@@ -304,17 +304,17 @@ window.renderCart = function() {
     let total = 0;
     
     window.cartItems.forEach((item, index) => {
-        html += '<li style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">' +
-                    '<span style="color: #333;">' + item.name + '</span>' +
-                    '<span style="color: #28a745; font-weight: 600;">₹ ' + item.price.toLocaleString('en-IN') + '</span>' +
+        html += '<li style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">' +
+                    '<span style="color: #ffffff; font-weight: 500;">' + item.name + '</span>' +
+                    '<span style="color: #ff3333; font-weight: 700;">₹ ' + item.price.toLocaleString('en-IN') + '</span>' +
                  '</li>';
         total += item.price;
     });
     
     html += '</ul>';
-    html += '<div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem; color: #333; margin-top: 15px; border-top: 2px solid #ddd; padding-top: 10px;">' +
+    html += '<div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem; color: #ffffff; margin-top: 15px; border-top: 2px solid rgba(204, 0, 0, 0.3); padding-top: 12px;">' +
                 '<span>Total:</span>' +
-                '<span>₹ ' + total.toLocaleString('en-IN') + '</span>' +
+                '<span style="color: #ff3333; font-weight: 800;">₹ ' + total.toLocaleString('en-IN') + '</span>' +
              '</div>';
              
     cartSummary.innerHTML = html;
