@@ -3,7 +3,7 @@ import sqlite3
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__, static_folder='../frontend', static_url_path='')
 app.secret_key = 'super_secret_key_change_in_production'
 
 DB_FILE = 'users.db'
@@ -25,7 +25,7 @@ init_db()
 
 @app.route('/')
 def index():
-    return send_from_directory('.', 'indexP.html')
+    return send_from_directory('../frontend', 'indexP.html')
 
 @app.route('/api/signup', methods=['POST'])
 def signup():
