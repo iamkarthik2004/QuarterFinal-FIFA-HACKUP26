@@ -68,7 +68,11 @@ Three official 24/25 kits per nation with size selectors (`S`, `M`, `L`, `XL`), 
 * Logged-in users can post their own comments directly into the live fan discussion board
 
 ## 🏆 Match Winner Predictor
-An interactive winner prediction tool allowing fans to input the winning team, simulate AI prediction generation, and view updated match winner.
+An automated winner prediction engine that evaluates match outcomes based on real-time FIFA World Rankings:
+* **FIFA Ranking Matrix**: Utilizes an internal data structure indexing global team standings (e.g., Argentina #1, Spain #2, France #3, Portugal #5, Brazil #6).
+* **Automated Comparison Algorithm**: Dynamically extracts the home team and selected opponent, comparing their global numerical ranks (`homeRank` vs `awayRank`).
+* **Deterministic Outcome Determination**: Predicts victory for the team holding the higher global ranking (lower numerical index) or evaluates a draw for equal ranks.
+* **Interactive UI Simulation**: Features a smooth simulated evaluation buffer with animated spinner indicators before displaying the highlighted result.
 
 ---
 
@@ -77,24 +81,29 @@ An interactive winner prediction tool allowing fans to input the winning team, s
 ```
 QuarterFinal-FIFA-HACKUP26/
 │
-├── app.py                  # Flask backend server & authentication API
-├── users.db                # SQLite database for user credentials
+├── backend/                # Flask backend server & authentication API
+│   ├── app.py              # Main Flask server application & API endpoints
+│   └── users.db            # SQLite database storing user authentication credentials
 │
-└── frontend/               # Web application frontend assets
-    ├── indexA.html         # Argentina Fan Portal
-    ├── indexB.html         # Brazil Fan Portal
-    ├── indexP.html         # Portugal Fan Portal
-    ├── indexI.html         # India Fan Portal
-    ├── styleA.css          # Argentina stylesheet (Sky Blue theme)
-    ├── styleB.css          # Brazil stylesheet (Canary Yellow theme)
-    ├── styleP.css          # Portugal stylesheet (Crimson Red theme)
-    ├── styleI.css          # India stylesheet (Saffron Orange theme)
-    ├── scriptA.js          # Argentina client-side interactivity
-    ├── scriptB.js          # Brazil client-side interactivity
-    ├── scriptP.js          # Portugal client-side interactivity
-    ├── scriptI.js          # India client-side interactivity
-    ├── images/             # Jersey images and legend player portraits
-    └── videos/             # Dynamic background hero videos
+├── frontend/               # Web application frontend assets
+│   ├── indexA.html         # Argentina Fan Portal
+│   ├── indexB.html         # Brazil Fan Portal
+│   ├── indexP.html         # Portugal Fan Portal
+│   ├── indexI.html         # India Fan Portal
+│   ├── styleA.css          # Argentina stylesheet (Sky Blue theme)
+│   ├── styleB.css          # Brazil stylesheet (Canary Yellow theme)
+│   ├── styleP.css          # Portugal stylesheet (Crimson Red theme)
+│   ├── styleI.css          # India stylesheet (Saffron Orange theme)
+│   ├── scriptA.js          # Argentina client-side interactivity & predictor engine
+│   ├── scriptB.js          # Brazil client-side interactivity & predictor engine
+│   ├── scriptP.js          # Portugal client-side interactivity & predictor engine
+│   ├── scriptI.js          # India client-side interactivity & predictor engine
+│   ├── images/             # Official jersey assets & legend player portraits
+│   └── video/              # Dynamic background stadium hero videos
+│
+├── requirements.txt        # Python backend dependencies
+├── update_predictor.py     # Batch update utility script for winner predictor
+└── README.md               # Comprehensive project documentation
 ```
 
 ---
