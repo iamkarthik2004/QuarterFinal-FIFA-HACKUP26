@@ -644,23 +644,29 @@ section > h4 i {
     color: white;
 }
 
-.jersey-img-placeholder {
-    height: 150px;
-    border-radius: 8px;
+.jersey-img-container {
+    height: 180px;
+    border-radius: 10px;
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
+    background: #121216;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-.jersey-img-placeholder::after {
-    content: 'T-SHIRT IMG';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.3);
-    font-size: 0.8rem;
-    font-weight: bold;
+.jersey-img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 5px 12px rgba(0,0,0,0.6));
+}
+
+.jersey-card:hover .jersey-img-container img {
+    transform: scale(1.08);
 }
 
 .jersey-info h5 {
