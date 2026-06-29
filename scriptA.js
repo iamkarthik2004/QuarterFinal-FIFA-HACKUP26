@@ -243,4 +243,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 6. Favorite (Heart) Toggle Handler
+    const favoriteBtns = document.querySelectorAll('.favorite');
+    favoriteBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.classList.toggle('liked');
+            const icon = btn.querySelector('i');
+            if (icon) {
+                if (btn.classList.contains('liked')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                }
+            }
+        });
+    });
 });

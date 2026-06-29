@@ -54,8 +54,7 @@
                     <h3>SELEÇÃO DAS QUINAS</h3>
                     <p>Pride. Passion. Portugal. Support the legends and wear your colors with pride.</p>
                     <div class="banner-buttons">
-                        <button class="btn btn-primary">Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
-                        <button class="btn btn-outline">View Team <i class="fa-solid fa-chevron-right"></i></button>
+                        <button class="btn btn-primary" onclick="document.getElementById('jerseys-section').scrollIntoView({behavior: 'smooth'})">Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
                     </div>
                 </div>
             </section>
@@ -86,7 +85,6 @@
                         <div class="legend-card-inner">
                             <div class="legend-image" style="background-image: url('images/ronaldo.png')">
                                 <span class="number">7</span>
-                                <img class="crest" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Portuguese_Football_Federation.svg/1200px-Portuguese_Football_Federation.svg.png" alt="Crest">
                             </div>
                             <div class="legend-info">
                                 <h5>CRISTIANO RONALDO</h5>
@@ -99,7 +97,6 @@
                         <div class="legend-card-inner">
                             <div class="legend-image" style="background-image: url('images/luisfigo.png')">
                                 <span class="number">10</span>
-                                <img class="crest" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Portuguese_Football_Federation.svg/1200px-Portuguese_Football_Federation.svg.png" alt="Crest">
                             </div>
                             <div class="legend-info">
                                 <h5>LUÍS FIGO</h5>
@@ -112,7 +109,7 @@
             </section>
 
             <!-- Official Jerseys -->
-            <section class="jerseys-section">
+            <section class="jerseys-section" id="jerseys-section">
                 <h4><i class="fa-solid fa-shirt"></i> OFFICIAL JERSEYS</h4>
                 <div class="jerseys-grid">
                     <div class="jersey-card">
