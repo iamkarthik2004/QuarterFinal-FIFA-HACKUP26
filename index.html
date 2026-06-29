@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Fan Zone - Portugal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="logo-text">
+                    <h1>NATIONAL <span>FAN ZONE</span></h1>
+                    <p>LIVE. LOVE. SUPPORT.</p>
+                </div>
+            </div>
+            
+            <div class="country-toggles">
+                <button class="country-btn"><img src="https://flagcdn.com/w20/br.png" alt="Brazil"> BRAZIL</button>
+                <button class="country-btn"><img src="https://flagcdn.com/w20/ar.png" alt="Argentina"> ARGENTINA</button>
+                <button class="country-btn active"><img src="https://flagcdn.com/w20/pt.png" alt="Portugal"> PORTUGAL</button>
+            </div>
+
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search merch, players...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">3</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-grid">
+            <!-- Left Banner -->
+            <section class="banner-section">
+                <div class="banner-content">
+                    <h2>PORTUGAL</h2>
+                    <h3>SELEÇÃO DAS QUINAS</h3>
+                    <p>Pride. Passion. Portugal. Support the legends and wear your colors with pride.</p>
+                    <div class="banner-buttons">
+                        <button class="btn btn-primary">Shop Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="btn btn-outline">View Team <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Fan Comments -->
+            <section class="comments-section">
+                <div class="section-header">
+                    <h4><i class="fa-solid fa-users"></i> LIVE FAN COMMENTS</h4>
+                    <span class="live-indicator">LIVE</span>
+                </div>
+                <div class="comments-list">
+                    <!-- Comment items will be populated by JS -->
+                </div>
+                <div class="comments-footer">
+                    <p>Join the conversation: <span>#ForçaPortugal</span></p>
+                </div>
+            </section>
+
+            <!-- National Legends -->
+            <section class="legends-section">
+                <h4><i class="fa-solid fa-star"></i> NATIONAL LEGENDS</h4>
+                <div class="legends-grid">
+                    <div class="legend-card">
+                        <div class="legend-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg')">
+                            <span class="number">7</span>
+                            <img class="crest" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Portuguese_Football_Federation.svg/1200px-Portuguese_Football_Federation.svg.png" alt="Crest">
+                        </div>
+                        <div class="legend-info">
+                            <h5>CRISTIANO RONALDO</h5>
+                            <span class="position">Forward</span>
+                            <p>All-time top scorer and Portugal's greatest icon. A true legend of the beautiful game.</p>
+                        </div>
+                    </div>
+                    <div class="legend-card">
+                        <div class="legend-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Luis_Figo.jpg/800px-Luis_Figo.jpg')">
+                            <span class="number">10</span>
+                            <img class="crest" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Portuguese_Football_Federation.svg/1200px-Portuguese_Football_Federation.svg.png" alt="Crest">
+                        </div>
+                        <div class="legend-info">
+                            <h5>LUÍS FIGO</h5>
+                            <span class="position">Midfielder</span>
+                            <p>The maestro who redefined Portuguese football with class, vision and elegance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Official Jerseys -->
+            <section class="jerseys-section">
+                <h4><i class="fa-solid fa-shirt"></i> OFFICIAL JERSEYS</h4>
+                <div class="jerseys-grid">
+                    <div class="jersey-card">
+                        <div class="favorite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="jersey-img-placeholder" style="background: linear-gradient(135deg, #cc0000, #990000)"></div>
+                        <div class="jersey-info">
+                            <h5>Portugal Home 24/25</h5>
+                            <span class="price">₹ 3,499</span>
+                        </div>
+                        <div class="jersey-actions">
+                            <select><option>S</option><option>M</option><option>L</option></select>
+                            <button class="btn btn-primary btn-sm"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="favorite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="jersey-img-placeholder" style="background: linear-gradient(135deg, #f0f0f0, #e0e0e0)"></div>
+                        <div class="jersey-info">
+                            <h5>Portugal Away 24/25</h5>
+                            <span class="price">₹ 3,499</span>
+                        </div>
+                        <div class="jersey-actions">
+                            <select><option>M</option><option>L</option></select>
+                            <button class="btn btn-primary btn-sm"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="favorite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="jersey-img-placeholder" style="background: linear-gradient(135deg, #111, #333)"></div>
+                        <div class="jersey-info">
+                            <h5>Portugal Third 24/25</h5>
+                            <span class="price">₹ 3,499</span>
+                        </div>
+                        <div class="jersey-actions">
+                            <select><option>L</option><option>XL</option></select>
+                            <button class="btn btn-primary btn-sm"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Match Score Predictor -->
+            <section class="predictor-section">
+                <h4><i class="fa-solid fa-chart-simple"></i> MATCH SCORE PREDICTOR</h4>
+                <div class="predictor-teams">
+                    <div class="team">
+                        <img src="https://flagcdn.com/w40/pt.png" alt="Portugal">
+                        <span>PORTUGAL</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <div class="trophy-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <span>OPPONENT</span>
+                    </div>
+                </div>
+                <div class="score-inputs">
+                    <input type="number" id="home-score" value="2" min="0">
+                    <span class="dash">-</span>
+                    <input type="number" id="away-score" value="1" min="0">
+                </div>
+                <button class="btn btn-primary btn-full" id="predict-btn">PREDICT SCORE <i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                <div class="prediction-result">Your Prediction: <span id="current-prediction">2 - 1</span></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo-section">
+                <div class="logo">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div class="logo-text">
+                        <h1>NATIONAL <span>FAN ZONE</span></h1>
+                        <p>The ultimate destination for real fans. Live the game. Wear the pride.</p>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="#">Home</a>
+                    <a href="#">Teams</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="link-col">
+                    <h4>SUPPORT</h4>
+                    <a href="#">FAQs</a>
+                    <a href="#">Shipping & Returns</a>
+                    <a href="#">Size Guide</a>
+                    <a href="#">Track Order</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>NEWSLETTER</h4>
+                <p>Get exclusive updates and offers.</p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
