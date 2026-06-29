@@ -176,26 +176,24 @@
 
             <!-- Match Score Predictor -->
             <section class="predictor-section">
-                <h4><i class="fa-solid fa-chart-simple"></i> MATCH SCORE PREDICTOR</h4>
+                <h4><i class="fa-solid fa-chart-simple"></i> WHO WILL WIN?</h4>
                 <div class="predictor-teams">
                     <div class="team">
                         <img src="https://flagcdn.com/w40/ar.png" alt="Argentina">
-                        <span>ARGENTINA</span>
+                        <span id="home-team-name">ARGENTINA</span>
                     </div>
                     <div class="vs">VS</div>
-                    <div class="team">
-                        <div class="trophy-icon"><i class="fa-solid fa-trophy"></i></div>
-                        <span>OPPONENT</span>
+                    <div class="team" style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                        <select id="opponent-select" style="padding: 8px; border-radius: 4px; border: 1px solid #444; background: #222; color: #fff; font-weight: bold; width: 120px; font-size: 0.9rem;">
+                            <option value="" disabled selected>Opponent</option>
+                            <option value="Argentina">Argentina</option><option value="Spain">Spain</option><option value="France">France</option><option value="England">England</option><option value="Portugal">Portugal</option><option value="Brazil">Brazil</option><option value="Morocco">Morocco</option><option value="Netherlands">Netherlands</option><option value="Belgium">Belgium</option><option value="Germany">Germany</option><option value="Croatia">Croatia</option><option value="Italy">Italy</option><option value="Colombia">Colombia</option><option value="Mexico">Mexico</option><option value="Senegal">Senegal</option><option value="Uruguay">Uruguay</option><option value="United States">United States</option><option value="Japan">Japan</option><option value="Switzerland">Switzerland</option><option value="Iran">Iran</option><option value="India">India</option>
+                        </select>
                     </div>
                 </div>
-                <div class="score-inputs">
-                    <input type="number" id="home-score" value="2" min="0">
-                    <span class="dash">-</span>
-                    <input type="number" id="away-score" value="1" min="0">
-                </div>
-                <button class="btn btn-primary btn-full" id="predict-btn">PREDICT SCORE <i
+                
+                <button class="btn btn-primary btn-full" id="predict-btn">PREDICT WINNER <i
                         class="fa-solid fa-wand-magic-sparkles"></i></button>
-                <div class="prediction-result">Your Prediction: <span id="current-prediction">2 - 1</span></div>
+                <div class="prediction-result">Your Prediction: <span id="current-prediction">None</span></div>
             </section>
         </main>
 

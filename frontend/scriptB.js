@@ -62,24 +62,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 8000); // Add a new comment every 8 seconds
 
-    // 2. Score Predictor
+            // 2. Automated Winner Predictor
     const predictBtn = document.getElementById('predict-btn');
-    const homeScore = document.getElementById('home-score');
-    const awayScore = document.getElementById('away-score');
     const currentPrediction = document.getElementById('current-prediction');
+    const opponentSelect = document.getElementById('opponent-select');
+    const homeTeamSpan = document.getElementById('home-team-name');
+    
+    const rankings = {
+        'Argentina': 1, 'Spain': 2, 'France': 3, 'England': 4, 'Portugal': 5,
+        'Brazil': 6, 'Morocco': 7, 'Netherlands': 8, 'Belgium': 9, 'Germany': 10,
+        'Croatia': 11, 'Italy': 12, 'Colombia': 13, 'Mexico': 14, 'Senegal': 15,
+        'Uruguay': 16, 'United States': 17, 'Japan': 18, 'Switzerland': 19, 'Iran': 20,
+        'India': 99 // Default for India since not in top 20
+    };
 
-    if (predictBtn) {
+    if (predictBtn && opponentSelect && homeTeamSpan) {
         predictBtn.addEventListener('click', () => {
-            const hVal = homeScore.value;
-            const aVal = awayScore.value;
+            const opponent = opponentSelect.value;
+            const homeTeamUpper = homeTeamSpan.textContent.trim();
+            
+            // Map homeTeamUpper (e.g., BRAZIL) to camel case key (Brazil)
+            let homeTeam = homeTeamUpper.charAt(0).toUpperCase() + homeTeamUpper.slice(1).toLowerCase();
+            
+            if (!opponent) {
+                if (typeof showToast === 'function') {
+                    showToast('Please select an opponent first!');
+                } else {
+                    alert('Please select an opponent first!');
+                }
+                return;
+            }
+            
+            let homeRank = rankings[homeTeam] || 100;
+            let awayRank = rankings[opponent] || 100;
+            
+            let predictedWinner = 'DRAW';
+            if (homeRank < awayRank) {
+                predictedWinner = homeTeamUpper + ' WIN';
+            } else if (awayRank < homeRank) {
+                predictedWinner = opponent.toUpperCase() + ' WIN';
+            }
             
             predictBtn.innerHTML = 'PREDICTING... <i class="fa-solid fa-spinner fa-spin"></i>';
             
             setTimeout(() => {
-                currentPrediction.textContent = `${hVal} - ${aVal}`;
-                predictBtn.innerHTML = 'PREDICT SCORE <i class="fa-solid fa-wand-magic-sparkles"></i>';
+                currentPrediction.textContent = predictedWinner;
+                predictBtn.innerHTML = 'PREDICT WINNER <i class="fa-solid fa-wand-magic-sparkles"></i>';
                 
-                // Highlight prediction result briefly
                 currentPrediction.style.color = 'var(--green-accent)';
                 setTimeout(() => {
                     currentPrediction.style.color = 'white';
